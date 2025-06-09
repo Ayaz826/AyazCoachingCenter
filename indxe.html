@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayaz Coaching Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f8fc;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .navbar {
+      background-color: #083663;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      font-weight: bold;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffcc00;
+    }
+
+    .search-box {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .search-box input {
+      padding: 6px;
+      border-radius: 4px 0 0 4px;
+      border: none;
+    }
+
+    .search-box button {
+      padding: 6px 10px;
+      border: none;
+      background: #ffcc00;
+      color: #083663;
+      font-weight: bold;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(to bottom, #dbefff, #f0f8ff);
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #083663;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .slider {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      margin: 30px 0;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1e90ff;
+      font-size: 32px;
+    }
+
+    .courses ul {
+      max-width: 800px;
+      margin: auto;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .courses ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px 25px;
+      border-left: 6px solid #083663;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+    }
+
+    .about-text, .about-img {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .testimonials, .activities {
+      background-color: #e9f4ff;
+    }
+
+    .testimonial-box, .activity-box {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-left: 5px solid #1e90ff;
+    }
+
+    .contact p {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    footer {
+      background-color: #083663;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffcc00;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar ul li {
+        margin: 10px 0;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+
+      .slider {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">Ayaz Coaching Center</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <section class="hero" id="home">
+    <h1>Welcome to Ayaz Coaching Center</h1>
+    <p>Shaping futures with smart guidance and focused learning.</p>
+  </section>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="/s1.webp" alt="Slide 1">
+      <img src="/s2.webp" alt="Slide 2">
+      <img src="/s3.webp" alt="Slide 3">
+    </div>
+  </div>
+
+  <section class="section courses" id="courses">
+    <h2>Our Courses</h2>
+    <ul>
+      <li>WBBSE – Class 1 to 12 (All Subjects)</li>
+      <li>CBSE – Class 1 to 10 (All Subjects)</li>
+      <li>Computer – Coding and Microsoft Tools</li>
+      <li>Special doubt-clearing and exam-preparation sessions</li>
+    </ul>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Ayaz Coaching Center is more than just a coaching institute – it's a hub of excellence, where students of WBBSE, CBSE, and those interested in technology receive holistic guidance. We not only focus on strong academic performance but also ensure our students are equipped with essential digital skills like coding (Python, C, C++, HTML, CSS, JS) and Microsoft Office tools (Excel, Word, PowerPoint). Our goal is to empower the youth to think smart, work hard, and stay digitally ahead in this fast-changing world.</p>
+    </div>
+    <div class="about-img">
+      <img src="/ME.jpg" alt="Ayaz Coaching Center">
+    </div>
+  </section>
+
+  <section class="section testimonials" id="testimonials">
+    <h2>Student Testimonials</h2>
+    <div class="testimonial-box">
+      <p><strong>Fatima S.</strong> - "The environment at Ayaz Coaching is very motivating. I improved my grades and also learned how to build websites!"</p>
+    </div>
+    <div class="testimonial-box">
+      <p><strong>Ravi Kumar</strong> - "Best coaching center in Raniganj! Teachers are friendly, and practical classes helped me learn Excel and Python easily."</p>
+    </div>
+  </section>
+
+  <section class="section activities" id="activities">
+    <h2>Student Activities</h2>
+    <div class="activity-box">
+      <p>💻 Weekly coding competitions</p>
+    </div>
+    <div class="activity-box">
+      <p>📊 Power BI and Excel practical sessions</p>
+    </div>
+    <div class="activity-box">
+      <p>📚 Mock tests for board exams</p>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: aiyazalam597@gmail.com<br>
+       Phone: +91-8388830383<br>
+       Location: HUSSAIN NAGAR, RANIGANJ, WEST BENGAL, India</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.6449287284904!2d87.12205347388762!3d23.61706389388494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7116a861ccb79%3A0xf1770cefca40b832!2sRaniganj%20Urdu%20High%20School%20(H.S)!5e0!3m2!1sen!2sin!4v1748333648931!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>Contact: +91 7699905475 | Email: ayazcoaching@gmail.com</p>
+    <p>
+      Follow us:
+      <a href="https://www.facebook.com/profile.php?id=100013990868644">Facebook</a>
+      |
+      <a href="https://github.com/Ayaz826/Developer_Ayaz">GitHub</a>
+      |
+      <a href="https://www.instagram.com/ayazalam972?igsh=d29neHhqc2Flbm9m">Instagram</a>
+    </p>
+    <p>&copy; 2025 Ayaz Coaching Center. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
